@@ -22,7 +22,7 @@ class NewNote extends React.Component {
         this.props.addNote(newNote);
         this.setState({ noteName: '', noteBody: '' });
         let route = window.location.pathname.split('/')
-        let newRoute = route.splice(0, route.length -1).join('/')
+        let newRoute = route.splice(0, route.length - 1).join('/')
         window.location.pathname = newRoute;
     }
 
@@ -47,7 +47,7 @@ class NewNote extends React.Component {
                     Create New Note:
                 </div>
                 <div className="mainContent__content">
-                    <form className="mainContent__Form"  onSubmit={(this.state.noteName && this.state.noteBody) ? this.createNote : null} >
+                    <form className="mainContent__Form" onSubmit={(this.state.noteName && this.state.noteBody) ? this.createNote : null} >
                         <input
                             className="form__input form__input--title"
                             onChange={this.handleInputChange}
